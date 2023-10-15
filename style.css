@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
@@ -76,6 +76,7 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .col {
@@ -89,14 +90,15 @@ body {
     margin-right: 10px;
 }
 
-.humidity, .wind {
+.humidity,
+.wind {
     font-size: 28px;
     margin-top: -6px;
 }
 
-.weather { 
+/* .weather { 
     display: none;
-}
+} */
 
 .error {
     text-align: left;
@@ -104,4 +106,48 @@ body {
     font-size: 14px;
     margin-top: 10px;
     display: none;
+}
+
+@media (max-width: 440px) {
+    .search input {
+        width: 70%;
+    }
+
+    .details {
+        justify-content: center;
+    }
+
+    .details #wind {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .search {
+        flex-direction: column;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .search button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 275px) {
+    .weather-icon {
+        width: 100px;
+    }
+    .weather h1 {
+        font-size: 50px;
+    }
+    .weather h2 {
+        font-size: 32px;
+        margin-top: 0;
+    }
 }
